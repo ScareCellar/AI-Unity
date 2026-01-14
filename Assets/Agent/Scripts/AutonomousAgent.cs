@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class AutonomousAgent : MonoBehaviour
+public class AutonomousAgent : AIAgent
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] Movement movement;
+    [SerializeField] Perception perception;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        movement.ApplyForce(Vector3.forward);
+
+        transform.position = Utilities.Wrap(transform.position, new Vector3 (-15,-15,-15), new Vector3(15,15,15));
     }
 }
