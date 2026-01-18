@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutonomousAgent
   movement: {fileID: 7833538763619867335}
-  perception: {fileID: 8899299810113937154}
+  seekPerception: {fileID: 0}
+  fleePerception: {fileID: 8899299810113937154}
 --- !u!114 &7833538763619867335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KinematicMovement
   maxSpeed: 1
-  minSpeed: 1
+  maxForce: 1
 --- !u!114 &8899299810113937154
 MonoBehaviour:
   m_ObjectHideFlags: 0
