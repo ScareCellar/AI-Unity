@@ -1,12 +1,13 @@
 using UnityEngine;
+using System;
 
 public static class Utilities
 {
     public static float Wrap(float v, float min, float max)
     {
-        if (v < min) v += max;
-        if (v > max) v -= max;
-        
+        if (v < min) v += Math.Abs(max) + Math.Abs(min);
+        if (v > max) v -= Math.Abs(max) + Math.Abs(min);
+
         return v;
     }
 
