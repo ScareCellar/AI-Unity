@@ -4,6 +4,8 @@ public abstract class Perception : MonoBehaviour
 {
     [SerializeField] string info;
 
+    [SerializeField] protected LayerMask layerMask = Physics.AllLayers;
+
     [SerializeField] protected string tagName;
     [SerializeField] protected float maxDistance;
     [SerializeField, Range(0,180)] public float fov;
