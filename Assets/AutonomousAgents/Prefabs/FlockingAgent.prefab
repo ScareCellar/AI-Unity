@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 696128087727263189}
   m_Layer: 0
   m_Name: FlockingAgent
-  m_TagString: Agent02
+  m_TagString: Flock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutonomousAgent
   movement: {fileID: 7833538763619867335}
   seekPerception: {fileID: 0}
-  fleePerception: {fileID: 8899299810113937154}
+  fleePerception: {fileID: 0}
+  flockPerception: {fileID: 8899299810113937154}
+  wanderRadius: 1
+  wanderDistance: 1
+  wanderDisplacement: 1
+  cohesionWeight: 1.85
+  separationWeight: 2
+  alignmentWeight: 2
+  separationRadius: 2
 --- !u!114 &7833538763619867335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3c320f26698104483061a19a270597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistancePerception
-  info: Flee
-  tagName: Agent01
+  info: Flock
+  tagName: Flock
   maxDistance: 5
   fov: 180
 --- !u!33 &428598572114183418

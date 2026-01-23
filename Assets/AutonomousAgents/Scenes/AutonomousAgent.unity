@@ -575,8 +575,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AgentSpawner
   agents:
-  - {fileID: 6902581184416329433, guid: 0ef3088f42578cc498eb37272bf8604c, type: 3}
+  - {fileID: 5092108031360753716, guid: 15f59061aa1517240869eaf0e58e46a0, type: 3}
   - {fileID: 5092108031360753716, guid: 070a0f9b1d5d19f45a6319349f301c10, type: 3}
+  - {fileID: 6902581184416329433, guid: 0ef3088f42578cc498eb37272bf8604c, type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 8
