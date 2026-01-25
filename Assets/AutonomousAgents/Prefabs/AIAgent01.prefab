@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6902581184416329433}
   - component: {fileID: 1862036173199041552}
   - component: {fileID: 4512278209114225907}
+  - component: {fileID: -3147334774233377285}
   - component: {fileID: 7370628204405233649}
   - component: {fileID: 4571877248931740571}
   - component: {fileID: 4070235248235694725}
@@ -51,11 +52,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutonomousAgent
   movement: {fileID: 1862036173199041552}
-  seekPerception: {fileID: 4512278209114225907}
+  seekPerception: {fileID: -3147334774233377285}
   fleePerception: {fileID: 0}
-  wanderRadius: 100
-  wanderDistance: 0
-  wanderDisplacement: 100
+  flockPerception: {fileID: 0}
+  wanderRadius: 1000
+  wanderDistance: 5
+  wanderDisplacement: 10
+  cohesionWeight: 1
+  separationWeight: 1
+  alignmentWeight: 1
+  separationRadius: 1
 --- !u!114 &1862036173199041552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301dbd6e4bf1bdb4899e80ea46181229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KinematicMovement
-  maxSpeed: 1
+  maxSpeed: 2
   maxForce: 1
 --- !u!114 &4512278209114225907
 MonoBehaviour:
@@ -83,9 +89,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistancePerception
   info: Seek
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  tagName: Agent02
+  maxDistance: 10
+  fov: 180
+--- !u!114 &-3147334774233377285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993366596058978581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591ff6242e0dad642beb5d3f54470526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaycastPerception
+  info: Seek
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   tagName: Agent02
   maxDistance: 5
-  fov: 180
+  fov: 83
+  numRays: 50
 --- !u!33 &7370628204405233649
 MeshFilter:
   m_ObjectHideFlags: 0
