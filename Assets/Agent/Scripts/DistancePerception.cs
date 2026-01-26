@@ -30,4 +30,12 @@ public class DistancePerception : Perception
         }
         return result.ToArray();
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = debugColor;
+
+        Gizmos.DrawWireSphere(transform.position, maxDistance);
+
+    }
 }

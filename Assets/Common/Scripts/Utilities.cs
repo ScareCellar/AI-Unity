@@ -39,7 +39,7 @@ public static class Utilities
         }
 
         // compute angle between rays (angle * 2 / num rays - 1)
-        float angleOffset = angle * 2 / num - 1;
+        float angleOffset = angle * 2 / num;
 
         // add directions symmetrically around the circle
         for (int i = 1; i <= num / 2; i++)
