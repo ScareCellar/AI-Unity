@@ -94,6 +94,8 @@ public class AutonomousAgent : AIAgent
         {
             transform.rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
         }
+
+        transform.LookAt(transform.position + movement.Velocity);
     }
 
     Vector3 Seek(GameObject target)
