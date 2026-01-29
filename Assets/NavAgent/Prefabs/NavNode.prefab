@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7948946041629894014}
   - component: {fileID: 2478289136771674296}
   - component: {fileID: 3738820179030234419}
-  - component: {fileID: 5583769432355379281}
+  - component: {fileID: 8682244297692450721}
   - component: {fileID: 6293104036318563923}
-  m_Layer: 0
-  m_Name: NavWaypoint
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: NavNode
+  m_TagString: NavNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5583769432355379281
+--- !u!114 &8682244297692450721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,9 +101,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1045499558540042197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 930cf41420370e84ba716553c62be997, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ea49da9c625bd64493c34b2a426484f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NavWaypoint
+  m_EditorClassIdentifier: Assembly-CSharp::NavNode
+  neighbors: []
 --- !u!135 &6293104036318563923
 SphereCollider:
   m_ObjectHideFlags: 0

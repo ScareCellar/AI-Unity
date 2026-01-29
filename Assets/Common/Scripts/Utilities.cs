@@ -1,11 +1,20 @@
 using System;
-using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public static class Utilities
 {
-    public static float Wrap(float v, float min, float max)
+        public static Color white = new(1, 1, 1, 0.5f);
+        public static Color green = new(0, 1, 0, 0.5f);
+        public static Color red = new(1, 0, 0, 0.5f);
+        public static Color blue = new(0, 0, 1, 0.5f);
+
+        public static Color ColorAlpha(Color color, float alpha = 0.5f)
+        {
+            return new Color(color.r, color.g, color.b, alpha);
+        }
+
+        public static float Wrap(float v, float min, float max)
     {
         if (v < min) v += Math.Abs(max) + Math.Abs(min);
         if (v > max) v -= Math.Abs(max) + Math.Abs(min);

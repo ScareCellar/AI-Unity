@@ -7,7 +7,7 @@ public class NavAgent : AIAgent
     public NavNode TargetNode {  get; set; }
     void Start()
     {
-        TargetNode = NavNode.GetRandomNavNode();
+        TargetNode = NavNode.GetNearestNavNode(transform.position);
     }
 
     // Update is called once per frame
@@ -19,6 +19,18 @@ public class NavAgent : AIAgent
             Vector3 force = direction.normalized * movement.maxForce;
 
             movement.ApplyForce(force);
+        }
+        if (movement.Velocity.sqrMagnitude > 0)
+        {
+            transform.rotation = Quaternion.LookRotation(movement.Velocity);
+        }
+    }
+
+    public void OnEnterNavNode(NavNode navNode)
+    {
+        if (navNode == TargetNode)
+        {
+            TargetNode = navNode.Neighbors[Random.Range(0, navNode.Neighbors.Count)];
         }
     }
 }
