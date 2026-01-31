@@ -77,7 +77,7 @@ public class AutonomousAgent : AIAgent
             if (obstaclePerception.GetOpenDirection(ref openDirection))
             {
                 hasTarget = true;
-                movement.ApplyForce(GetSteeringForce(openDirection * obstacleWeight));
+                movement.ApplyForce(GetSteeringForce(openDirection) * obstacleWeight);
             }
         }
 

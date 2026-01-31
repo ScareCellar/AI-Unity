@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 181002974}
   - component: {fileID: 181002973}
   - component: {fileID: 181002972}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,11 +226,11 @@ Transform:
   m_GameObject: {fileID: 181002971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.67999, y: 0, z: 2.95031}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.1671245, y: 3.1671245, z: 3.1671245}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1150960025}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
@@ -554,7 +554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150960025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Environment
   m_TagString: Environment
   m_Icon: {fileID: 0}
@@ -574,7 +574,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 181002975}
   - {fileID: 1917819543}
   - {fileID: 1726691189}
   - {fileID: 1152568023}
@@ -594,7 +593,7 @@ GameObject:
   - component: {fileID: 1152568022}
   - component: {fileID: 1152568021}
   - component: {fileID: 1152568020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +705,7 @@ GameObject:
   - component: {fileID: 1236713850}
   - component: {fileID: 1236713849}
   - component: {fileID: 1236713848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,10 +836,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AgentSpawner
   agents:
   - {fileID: 6902581184416329433, guid: 0ef3088f42578cc498eb37272bf8604c, type: 3}
-  - {fileID: 5092108031360753716, guid: 070a0f9b1d5d19f45a6319349f301c10, type: 3}
+  - {fileID: 5092108031360753716, guid: 15f59061aa1517240869eaf0e58e46a0, type: 3}
   layerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
 --- !u!4 &1279786755
 Transform:
   m_ObjectHideFlags: 0
@@ -868,7 +867,7 @@ GameObject:
   - component: {fileID: 1726691188}
   - component: {fileID: 1726691187}
   - component: {fileID: 1726691186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +979,7 @@ GameObject:
   - component: {fileID: 1844155127}
   - component: {fileID: 1844155126}
   - component: {fileID: 1844155125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,7 +1091,7 @@ GameObject:
   - component: {fileID: 1917819542}
   - component: {fileID: 1917819541}
   - component: {fileID: 1917819540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,4 +1199,5 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1279786755}
+  - {fileID: 181002975}
   - {fileID: 1150960025}

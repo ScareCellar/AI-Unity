@@ -24,8 +24,9 @@ public class KinematicMovement : Movement
         // clamp the length (magnitude) of the velocity to max speed 
         Velocity = Vector3.ClampMagnitude(Velocity, maxSpeed);
 
+        Vector3 finalVelocity = new Vector3(Velocity.x, 0, Velocity.z);
         // integrate velocity into position 
-        transform.position += Velocity * Time.deltaTime;
+        transform.position += finalVelocity * Time.deltaTime;
         // reset acceleration to zero for next frame, forces are recomputed each frame 
         Acceleration = Vector3.zero;
     }

@@ -25,7 +25,7 @@ public static class Utilities
     public static Vector3 Wrap(Vector3 v, Vector3 min, Vector3 max)
     {
         v.x = Wrap(v.x, min.x, max.x);
-        v.y = Wrap(v.y, min.y, max.y);
+        v.y = Wrap(v.y, 0, 0);
         v.z = Wrap(v.z, min.z, max.z);
 
         return v;
@@ -33,7 +33,7 @@ public static class Utilities
 
     public static Vector3[] GetDirectionsInCircle(int num, float angle)
     {
-        if (num <= 0) return null;
+        if (num <= 0) return Array.Empty<Vector3>();
         if (num == 1) return new Vector3[] { Vector3.forward };
 
         // create array of vector3
