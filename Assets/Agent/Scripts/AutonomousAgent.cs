@@ -88,7 +88,7 @@ public class AutonomousAgent : AIAgent
             movement.ApplyForce(force);
         }
 
-        transform.position = Utilities.Wrap(transform.position, new Vector3(-15, 0, -15), new Vector3(15, 0, 15));
+        //transform.position = Utilities.Wrap(transform.position, new Vector3(-15, 0, -15), new Vector3(15, 0, 15));
         
         if (movement.Velocity.sqrMagnitude > 0)
         {

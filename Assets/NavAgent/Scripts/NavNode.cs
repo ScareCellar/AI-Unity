@@ -5,7 +5,8 @@ public class NavNode : MonoBehaviour
     [SerializeField] protected List<NavNode> neighbors;
 
     public List<NavNode> Neighbors { get { return neighbors; }  set { neighbors = value; } }
-
+    public float Cost { get; set; } = 0;
+    public NavNode PreviousNavNode { get; set; } = null;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -53,6 +54,30 @@ public class NavNode : MonoBehaviour
         var nodes = GetAllNavNodes();
 
         return (nodes.Length == 0) ? null : nodes[Random.Range(0, nodes.Length)];
+    }
+
+    public static void ResetNavNodes()
+    {
+        NavNode[] navNodes = GetAllNavNodes();
+
+        foreach(NavNode n in navNodes)
+        {
+            n.Cost = float.MaxValue;
+            n.PreviousNavNode = null;
+        }
+    }
+
+    public static void CreatePath(NavNode navNode, ref List<NavNode> path)
+    {
+        //add nodes to path
+        while (navNode != null)
+        {
+            path.Add(navNode);
+            navNode = navNode.PreviousNavNode;
+        }
+        // reverse path to get correct order
+        // reverse path to get correct order
+        path.Reverse();
     }
 
     #endregion

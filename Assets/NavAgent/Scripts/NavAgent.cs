@@ -3,11 +3,15 @@ using UnityEngine;
 public class NavAgent : AIAgent
 {
     [SerializeField] Movement movement;
-
+    [SerializeField] NavPath path;
     public NavNode TargetNode {  get; set; }
     void Start()
     {
         TargetNode = NavNode.GetNearestNavNode(transform.position);
+        if(path != null)
+        {
+            path.GeneratePath(TargetNode.transform.position, TargetNode.transform.position);
+        }
     }
 
     // Update is called once per frame
@@ -28,8 +32,17 @@ public class NavAgent : AIAgent
 
     public void OnEnterNavNode(NavNode navNode)
     {
+
         if (navNode == TargetNode)
         {
+            if(path != null)
+            {
+                TargetNode = path.GetNextNavNode(navNode);
+                if (TargetNode == null)
+                {
+                    TargetNode = path.GeneratePath(navNode, NavNode.GetRandomNavNode());
+                }
+            }
             TargetNode = navNode.Neighbors[Random.Range(0, navNode.Neighbors.Count)];
         }
     }

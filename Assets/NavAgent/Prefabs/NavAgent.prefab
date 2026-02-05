@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NavAgent
   movement: {fileID: 7292702971546573849}
+  path: {fileID: 0}
 --- !u!114 &7292702971546573849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,8 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301dbd6e4bf1bdb4899e80ea46181229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KinematicMovement
-  maxSpeed: 1
-  maxForce: 1
+  maxSpeed: 2
+  maxForce: 30
 --- !u!33 &5210883392952786039
 MeshFilter:
   m_ObjectHideFlags: 0
